@@ -13,7 +13,7 @@ app.use(corsMiddleware())
 const server = createServer(app)
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5174', methods: ["GET", "POST"] }
+        origin: '*', methods: ["GET", "POST"] }
 });
 
 app.use(logger('dev'))
